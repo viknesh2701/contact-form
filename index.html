@@ -1,0 +1,69 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="./style.css">
+  <title>Frontend Mentor | Contact form</title>
+</head>
+<body>
+    <section class="contact">
+      <form id="contactForm"  class="contact__form" novalidate>
+        <h1 class="form__title">Contact Us</h1>
+       <div class="flex-row ">
+        <label class="form__label max-width" for="name"><span class="form__text" >First Name </span>
+          <input class="form__input color--checked max-width " type="text" name="name" id="name">
+          <span id="nameError" class="form__error__color--text"></span>
+        </label>
+        <label class="form__label max-width" for="lastName">
+          <span class="form__text">Last Name </span>
+          <input class="form__input color--checked max-width" type="text" name="lastName" id="lastName">
+          <span id="lastNameError" class="form__error__color--text"></span>
+        </label>
+       </div>
+        <label class="form__label form__label--email" for="email">
+          <span class="form__text">Email Address </span>
+          <input class="form__input  color--checked form__input--email" type="email" name="email" id="email">
+          <span id="emailError" class="form__error__color--text"></span>
+        </label>
+
+        <span class="form__text">Query Type </span>
+        <div class="flex-row ">
+          <label class="form__input form__input--align-center max-width" for="generalQuery">
+          <input class="form__input--raido max-width" type="radio" name="enqury" id="generalQuery">
+            <span class="form__text--radio">General Enquiry </span>
+          </label>
+          <label class="form__input form__input--align-center max-width" for="supportQuery">
+            <input class="form__input--raido max-width" type="radio" name="enqury" id="supportQuery">
+            <span class="form__text--radio">Support Request</span>
+          </label>
+          <span id="radioError" class="form__error__color--text"></span>
+        </div>
+        <label class="form__label" for="message">
+           <span class="form__text">Message </span></label>
+           <textarea class="form__message color--checked" name="essage" id="message" cols="30" rows="10" ></textarea>
+           <span id="messageError" class="form__error__color--text"></span>
+           <label class="form__label form__label--row" for="consent">
+             <input class="form__checkbox" type="checkbox" name="consent" id="consent">
+             <span class="form__text form__text--checkbox">I consent to being contacted by the team </span>
+            </label>
+            <span id="consentError" class="form__error__color--text"></span>
+        <input id="submitBtn" class="form__input form__input-submit" type="submit" value="Submit">
+      </form>
+    </section>
+    <dialog  class="form__modal" id="successModal">
+      <h5 class="form__modal__title"><img src="./assets/images/icon-success-check.svg" alt="success icon"><span>Message Sent!</span></h5>
+      <p class="form__modal__message">Thanks for completing the form . We'll be in touch soon!</p>
+    </dialog>
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io/profile/viknesh2701">Frontend Mentor</a>.
+    Coded by <a href="#">Viknesh K</a>.
+  </footer>
+  <script src="./formValidation.js"></script>
+</body>
+</html>
